@@ -9,7 +9,6 @@ public class Hello {
         System.out.println("standard message : " + message);
         System.out.println("capitalized by " + WordUtils.class.getName() 
                                 + " : " + WordUtils.capitalizeFully(message));
-//test
     }
 }
         
