@@ -74,7 +74,7 @@
           target: go
                     Go ivy, go!
          ================================= -->
-    <target name="go" depends="install-ivy, generate-src,resolve" description="--&gt; resolve dependencies, compile and run the project">
+    <target name="go" depends="install-ivy, resolve" description="--&gt; resolve dependencies, compile and run the project">
 		<echo message="using ivy to resolve commons-lang 2.1..."/>
         <!-- here comes the magic line: asks ivy to resolve a dependency on 
              commons-lang 2.1 and to build an ant path with it from its cache  -->
@@ -112,7 +112,7 @@ Let's go!
             source code to a file. In real life this file would already be
             present on your file system, and this target wouldn't be necessary.
          ================================= -->
-    <target name="generate-src">
+   <!-- <target name="generate-src">
         <mkdir dir="${src.dir}/example"/>
         <echo file="${src.dir}/example/Hello.java">
 package example;
@@ -122,13 +122,18 @@ import org.apache.commons.lang.WordUtils;
 public class Hello {
     public static void main(String[] args) {
         String  message = "hello ivy !";
+        int monmax=0;
+        CSVReader reader = new CSVReader(new FileReader("data.csv"));
+        List<String[]> myEntries=reader.readAll();
+        //parcourt
+        //System.out.println("")
         System.out.println("standard message : " + message);
         System.out.println("capitalized by " + WordUtils.class.getName() 
                                 + " : " + WordUtils.capitalizeFully(message));
     }
 }
         </echo>
-    </target>
+    </target>-->
 	
     <!-- ================================= 
           target: clean              
